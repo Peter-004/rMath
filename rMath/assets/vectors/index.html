@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rMath-Vector</title>
+    <link href="../Pictures/logo/rMath.jpg" rel="icon" type="image/png">
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="header">
+        <ul class="header-list">
+            <li class="home"><a href="../../index.html">Home</a></li>
+            <li class="sourcecode"><a href="https://github.com/Peter-004/rMath/">Source-Code</a></li>
+            <li class="complex"><a href="../complex/index.html">Complex</a></li>
+            <li class="ode"><a href="../ODE/index.html">ODE</a></li>
+            <li class="donate-abeg"><a href="mailto:opa15@rutgers.edu">Support</a></li>
+        </ul>
+        <img src="../Pictures/logo/rMath.jpg" alt="logo">
+    </div>
+    <div class="page-info">
+        <h2>VECTORS</h2>
+        <p>
+            Vectors are mathematical entities that have both <strong>magnitude</strong> (size) and <strong>direction</strong>, commonly represented as arrows in space. They are used to model physical quantities like force, velocity, and displacement. A vector is often denoted as <strong>v = (v₁, v₂, …, vₙ)</strong> in <em>n</em>-dimensional space. Key vector operations include:
+        </p>
+        <ul>
+            <li><strong>Addition</strong>: Combining two vectors <strong>u</strong> and <strong>v</strong> results in <strong>u + v</strong>, obtained by adding corresponding components.</li>
+            <li><strong>Subtraction</strong>: <strong>u − v</strong> is computed by subtracting components of <strong>v</strong> from <strong>u</strong>.</li>
+            <li><strong>Scalar Multiplication</strong>: Multiplying a vector <strong>v</strong> by a scalar <em>c</em> scales its magnitude, yielding <strong>c · v</strong>.</li>
+            <li><strong>Dot Product</strong>: <strong>u · v</strong> produces a scalar, measuring the vectors' alignment.</li>
+            <li><strong>Cross Product</strong>: In 3D, <strong>u × v</strong> yields a vector perpendicular to both <strong>u</strong> and <strong>v</strong>.</li>
+        </ul>
+        <p>
+            These operations are fundamental in physics, engineering, and computer graphics.
+        </p>
+            <br>
+    </div>
+    <div class="Add-menu operation" id="add">
+        <h2>Simplify Expression</h2>
+        <p>
+            You can add, subtract, dot, and cross two or more vectors here, by typing into the input box below. 
+            Solutions are rounded to three decimal places by default.To dot two vectors, use parenthesis((u)(v)). 'uxv' is 'u cross v'<br>
+        </p>
+        <div class="prompt">
+            <input class="inBox" type="text" name="expression" id="adder" placeholder="Write expr here e.g ((2i+4j)x(3i+4j)) + 4.5(3.4i+5j)">
+            <button class="solve" for="add">Solve</button>
+        </div>
+    </div>
+    <div class="Solving operation" id="equation">
+        <h2>General equation</h2>
+        <p>
+            Solving equation or simplifying vectors. Coming soon, you can update the github to contribute to this.
+        </p>
+        <div class="prompt">
+            <input class="inBox" type="text" name="expression" id="solver" placeholder="Write expr here e.g ((2i+4j)x(3i+4j)) + 4.5(3.4i+5j)=...">
+            <button class="solve" for="equation">Solve</button>
+        </div>
+    </div>
+    <div class="Simultaneous operation" id="simultaneous">
+        <h2>Simultaneous equations</h2>
+        <p>
+            You can solve vector simultaneous eq here by selecting the dimensions of the matrix. The equation is solved usign
+            More info of Cramer's method can be found <a href="https://en.wikipedia.org/wiki/Cramer%27s_rule">here</a>. <br>
+           . The matrix is Ax=B
+        </p> <br>
+        Enter the number of unknowns, n(n equations): <input type="number"  min="2" max="20" name="eqs" id="eqs">
+        <button id="generateMatrix">Enter</button>
+        <div class="prompt matrixgen">
+            <div class="matrix" id="matrixA" style="--clr: #e4001c96">
+                A
+            </div>
+            <div class="matrix" id="matrixX" style="--clr: #ffa50096">
+                x
+            </div>=
+            <div class="matrix" id="matrixB" style="--clr: #00800075">
+                B
+            </div>
+        </div>
+        <button class="solve" for="simultaneous">Solve</button>
+    </div>
+    <div class="ressy" id="res">
+        <h2>Other Resources</h2>
+        <p>
+            <a target="_blank" href="https://www.mathsisfun.com/algebra/vectors-cross-product.html">Cross product</a> |
+            <a target="_blank" href="https://www.wolframalpha.com/calculators/system-equation-calculator">Simultaneous eq</a> |
+            <a target="_blank" href="https://mathinsight.org/vector_introduction">Vectors</a> |
+            <a target="_blank" href="https://www.rutgers.edu/">Rutgers University</a>
+        </p> <br>
+    </div>
+    <script type="module" src="index.js"></script>
+</body>
+</html>

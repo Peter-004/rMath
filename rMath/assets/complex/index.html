@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rMath-Complex</title>
+    <link href="../Pictures/logo/rMath.jpg" rel="icon" type="image/png">
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="header">
+        <ul class="header-list">
+            <li class="home"><a href="../../index.html">Home</a></li>
+            <li class="sourcecode"><a target="_blank" href="https://github.com/Peter-004/rMath/">Source-Code</a></li>
+            <li class="vector"><a href="../vectors/index.html">Vector</a></li>
+            <li class="ode"><a href="../ODE/index.html">ODE</a></li>
+            <li class="donate-abeg"><a href="mailto:opa15@rutgers.edu">Support</a></li>
+        </ul>
+        <img src="../Pictures/logo/rMath.jpg" alt="logo">
+    </div>
+    <div class="page-info">
+        <h2>COMPLEX NUMBERS</h2>
+        <p>
+            Complex numbers are numbers that consist of two parts: a real part and an imaginary part, typically written as a+bi, where 
+            a is the real part and b is the imaginary part, with i representing the imaginary unit (where i^2 = -1). These numbers extend the concept of real numbers, allowing for the solution of equations that don't have real solutions, such as 
+            x 2 +1=0. Operations on complex numbers include addition, subtraction, multiplication, and division. <br>
+            <ul>
+                <li>Addition and Subtraction: Combine like terms, adding or subtracting the real and imaginary parts separately.</li>
+                <li>Multiplication: Apply the distributive property and use the fact that i2 = -1 to simplify.</li>
+                <li>Division: Multiply the numerator and denominator by the conjugate of the denominator to eliminate the imaginary part in the denominator.</li>
+            </ul>
+            <br> <br>
+            Complex numbers are essential in fields such as engineering, physics, and signal processing. Especially in the field of electrical engineering to solve complex simultaneous equations.
+            <br>
+        </p>
+    </div>
+    <div class="Add-menu operation" id="add">
+        <h2>Simplify Complex expressions</h2>
+        <p>
+            You can add, subtract, multiply, and divide two or more complex numbers here, by typing into the input box below. 
+            Solutions are rounded to three decimal places by default.<br>
+        </p>
+        <div class="prompt">
+            <input class="inBox" type="text" name="expression" id="adder" placeholder="Write expr here e.g 3.14i + 4.5 - (3.4+5j)">
+            <button class="solve" for="add">Solve</button>
+        </div>
+    </div>
+    <div class="Solving operation" id="equation">
+        <h2>General equation</h2>
+        <p>
+            Solving equation or simplifying complex number. Coming soon, you can update the github to contribute to this.
+        </p>
+        <div class="prompt">
+            <input class="inBox" type="text" name="expression" id="solver" placeholder="Write expr here e.g 3.14i + 4.5 - (3.4+5j)">
+            <button class="solve" for="equation">Solve</button>
+        </div>
+    </div>
+    <div class="Simultaneous operation" id="simultaneous">
+        <h2>Simultaneous equations</h2>
+        <p>
+            You can solve complex simultaneous eq here by selecting the dimensions of the matrix. The equation is solved usign Cramer's method.
+            More info of Cramer's method can be found <a href="https://en.wikipedia.org/wiki/Cramer%27s_rule">here</a>. <br>
+            Questions pertaining this section includes RLC circuits in EE, Sinusoidal signals, and other Electrical engineering applications.
+            The imaginary component should be i or j to align with convention. Use of both is also allowed. The matrix is Ax=B
+        </p> <br>
+        Enter the number of unknowns, n(n equations): <input type="number"  min="2" max="20" name="eqs" id="eqs">
+        <button id="generateMatrix">Enter</button>
+        <div class="prompt matrixgen">
+            <div class="matrix" id="matrixA" style="--clr: #e4001c96">
+                A
+            </div>
+            <div class="matrix" id="matrixX" style="--clr: #ffa50096">
+                x
+            </div>=
+            <div class="matrix" id="matrixB" style="--clr: #00800075">
+                B
+            </div>
+        </div>
+        <button class="solve" for="simultaneous">Solve</button>
+    </div>
+    <div class="ressy" id="res">
+        <h2>Other Resources</h2>
+        <p>
+            <a target="_blank" href="https://www.cuemath.com/algebra/cramers-rule/">Cramers</a> |
+            <a target="_blank" href="https://www.wolframalpha.com/calculators/system-equation-calculator">Simultaneous eq</a> |
+            <a target="_blank" href="https://www.mathforengineers.com/AC-circuits/complex-numbers-in-AC-circuits.html">AC Signals</a> |
+            <a target="_blank" href="https://www.rutgers.edu/">Rutgers University</a>
+        </p> <br>
+    </div>
+    <script type="module" src="index.js"></script>
+</body>
+</html>
