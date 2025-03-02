@@ -1,0 +1,18 @@
+# robots.txt for rMath
+
+# Allow all crawlers to access the entire site
+User-agent: *
+Disallow:
+
+# Disallow crawling of admin or private pages
+User-agent: *
+Disallow: /admin/
+Disallow: /dashboard/
+
+# Disallow crawling of search results or filters
+User-agent: *
+Disallow: /search/
+Disallow: /filter/
+
+# Allow crawling of sitemap
+Sitemap: https://rmath.netlify.app/sitemap.xml
