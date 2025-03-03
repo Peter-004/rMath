@@ -106,6 +106,7 @@ export function formatComplex(x, y) {
 
 export function polar(s){
     let {real: a, imag: b} = parseComplex(s);
+    if(a == 0 && b == 0)return `0<0∘`;
     return `${Math.sqrt((a*a)+(b*b))}<${Math.atan(b/a) * 180/Math.PI}∘`;//Incorrect implementation
 }
 
