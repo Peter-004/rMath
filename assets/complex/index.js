@@ -45,8 +45,7 @@ function solve(operation){
     case "add":
       q = document.getElementById("adder").value;
       ans = Complex.evalComplex(q);
-      console.log(ans);
-      document.getElementById(operation).insertAdjacentHTML('beforeend', `<h5>The answer to ${q} is: ${ans }</h2>`);
+      document.getElementById(operation).insertAdjacentHTML('beforeend', `<h5>The answer to ${q} is: ${ans}; Polar: ${Complex.polar(ans)}</h2>`);
     break;
     case "equation":
       //Your Contribution here:
