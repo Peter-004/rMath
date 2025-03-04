@@ -112,7 +112,7 @@ export class Vector {
 
     // Tokenize expression into numbers, operators, and parentheses
     static tokenize(s) {
-        const tokenRegex = /(\d+\.?\d*[ij]?|[ij]|[+\-*().x])/g;
+        const tokenRegex = /(\d+\.?\d*[ijk]?|[ijk]|[+\-*().x])/g;
         return s.match(tokenRegex);
     }
     
